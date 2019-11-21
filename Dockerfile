@@ -5,6 +5,7 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
 
 USER gitpod
 RUN nvim --headless +"call dein#install()" +qall \
+    && xinstall ipy3 -c \
     && xinstall svim -ic \
     && xinstall dsutil -ic \
     && xinstall pt -ic
