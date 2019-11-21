@@ -1,7 +1,7 @@
 FROM dclong/jupyterhub-ds
 
-RUN groupadd -o -g 9999 docker \
-    && useradd -oml -u 9999 -g docker -d /home/gitpod -s /bin/bash -c gitpod gitpod
+RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
+    && sed -i.bkp -e 's/%sudo\s\+ALL=(ALL\(:ALL\)\?)\s\+ALL/%sudo ALL=NOPASSWD:ALL/g' /etc/sudoers
 
 USER gitpod
 RUN nvim --headless +"call dein#install()" +qall \
