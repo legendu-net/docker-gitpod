@@ -1,7 +1,7 @@
 FROM dclong/jupyterhub-ds
 
 # avoid install Python packages into $HOME/.local/lib as GitPod does not search it
-RUN xinstall dsutil -ic --sys \
+RUN curl -sSL www.legendu.net/media/install_py_github.py | python3 - https://github.com/dclong/dsutil --sys \
     && pip3 install pelican
 
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
