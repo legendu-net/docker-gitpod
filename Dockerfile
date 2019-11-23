@@ -1,6 +1,6 @@
 FROM dclong/jupyterhub-ds
 
-RUN cat "$(date)" > /scripts/sys/version
+RUN echo "$(date)" > /scripts/sys/version
 
 # avoid install Python packages into $HOME/.local/lib as GitPod does not search it
 RUN curl -sSL www.legendu.net/media/install_py_github.py | python3 - https://github.com/dclong/dsutil --sys \
