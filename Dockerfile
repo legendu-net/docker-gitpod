@@ -2,7 +2,7 @@ FROM dclong/jupyterhub-ds
 
 RUN echo "$(date)" > /scripts/sys/version
 
-RUN xinstall spark -ic
+RUN xinstall spark -ic -v 2.4.5
 
 RUN pip3 install --no-cache-dir \
         pelican \
