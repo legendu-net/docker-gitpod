@@ -17,3 +17,4 @@ RUN pip3 install -U --no-cache-dir \
     pelican-render-math pelican-jupyter beautifulsoup4 typogrify
 
 USER root
+ENV PIP_USER=no
