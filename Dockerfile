@@ -16,4 +16,5 @@ RUN pip3 install -U --no-cache-dir \
     git+https://github.com/getpelican/pelican \
     pelican-render-math pelican-jupyter beautifulsoup4 typogrify
 
+COPY scripts/ /scripts/
 USER root
