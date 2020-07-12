@@ -2,7 +2,7 @@ FROM dclong/jupyterhub-ds
 
 RUN echo "$(date)" > /scripts/sys/version
 
-RUN xinstall spark -ic -v 3.0.0 && xinstall pyspark -ic
+RUN xinstall spark -ic && xinstall pyspark -ic
 RUN pip3 install -U --no-cache-dir \
     git+https://github.com/getpelican/pelican \
     pelican-render-math pelican-jupyter beautifulsoup4 typogrify
