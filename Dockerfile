@@ -1,4 +1,6 @@
+# NAME: dclong/gitpod
 FROM dclong/jupyterhub-ds
+# GIT: https://github.com/dclong/docker-jupyterhub-ds.git
 
 RUN echo "$(date)" > /scripts/sys/version
 
