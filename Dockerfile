@@ -4,7 +4,7 @@ FROM dclong/jupyterhub-ds
 
 RUN echo "$(date)" > /scripts/sys/version
 
-RUN xinstall spark -ic --loc /opt && xinstall pyspark -ic
+RUN xinstall spark -ic --loc /opt
 RUN pip3 install -U --no-cache-dir \
     pelican pelican-render-math pelican-jupyter \
     beautifulsoup4 typogrify
