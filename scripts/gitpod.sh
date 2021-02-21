@@ -1,5 +1,6 @@
 #!/bin/bash
 
+export PATH=/home/gitpod/.local/bin:$PATH
 if [ -f /workspace/blog/main.py ]; then
     ln -s /workspace/blog/main.py /home/gitpod/.local/bin/blog 
 fi
