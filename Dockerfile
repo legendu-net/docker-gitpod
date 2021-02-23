@@ -17,5 +17,5 @@ RUN xinstall ipython -c \
     && xinstall pt -ic
 
 COPY scripts/ /scripts/
-COPY settings/settings.json .gitpod-code/User/settings.json
+#COPY settings/settings.json .gitpod-code/User/settings.json
 USER root
