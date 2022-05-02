@@ -5,7 +5,7 @@ FROM dclong/jupyterhub-ds
 RUN xinstall spark -ic --loc /opt \
     && pip3 install -U \
         pyspark findspark \
-        pelican pelican-render-math pelican-jupyter \
+        pelican pelican-render-math "pelican-jupyter==0.10.0" \
         beautifulsoup4 typogrify \
     && /scripts/sys/purge_cache.sh 
 
