@@ -7,6 +7,7 @@ RUN xinstall spark -ic --loc /opt \
         pyspark findspark \
         pelican pelican-render-math "pelican-jupyter==0.10.0" \
         beautifulsoup4 typogrify \
+        aiutil[jupyter] \
     && /scripts/sys/purge_cache.sh 
 
 RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
