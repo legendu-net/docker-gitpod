@@ -2,7 +2,7 @@
 FROM dclong/jupyterhub-ds
 # GIT: https://github.com/legendu-net/docker-jupyterhub-ds.git
 
-RUN xinstall spark -ic --loc /opt \
+RUN icon spark -ic -d /opt \
     && pip3 install -U \
         pyspark findspark \
         pelican pelican-render-math "pelican-jupyter==0.10.0" \
