@@ -15,9 +15,9 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
 
 USER gitpod
 WORKDIR /home/gitpod/
-RUN xinstall ipython -c \
-    && xinstall svim -ic && nvim --headless +"call dein#install()" +qall \
-    && xinstall pt -ic \
+RUN icon ipython -c \
+    && icon svim -ic && nvim --headless +"call dein#install()" +qall \
+    && icon pt -ic \
     && /scripts/sys/purge_cache.sh
 
 COPY scripts/ /scripts/
