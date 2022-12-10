@@ -1,4 +1,4 @@
-# dclong/gitpod [@DockerHub](https://hub.docker.com/r/dclong/gitpod/) | [@GitHub](https://github.com/dclong/gitpod)
+# dclong/gitpod [@DockerHub](https://hub.docker.com/r/dclong/gitpod/) | [@GitHub](https://github.com/legendu-net/docker-gitpod)
 
 Docker image for use on GitPod.
 It is not intended to be used elsewhere (even if you can).
