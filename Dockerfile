@@ -15,7 +15,7 @@ RUN useradd -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash -p gitpod gitpod \
 
 USER gitpod
 WORKDIR /home/gitpod/
-RUN icon ipython -c && icon svim -ic && icon pt -ic \
+RUN icon ipython -c && icon svim -ic -y && icon pt -ic \
     && /scripts/sys/purge_cache.sh
 
 COPY scripts/ /scripts/
