@@ -13,7 +13,7 @@ RUN useradd gitpod -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash \
 
 USER gitpod
 WORKDIR /home/gitpod/
-RUN echo "\n. /scripts/path.sh\n" >> ~/.bashrc \
+RUN echo -e "\n. /scripts/path.sh\n" >> ~/.bashrc \
     && icon ipython -c && icon svim -ic -y && icon pt -ic \
     && /scripts/sys/purge_cache.sh
 
