@@ -3,8 +3,6 @@ FROM dclong/jupyterhub-ds
 # GIT: https://github.com/legendu-net/docker-jupyterhub-ds.git
 
 RUN icon spark -ic -d /opt \
-    && pip3 install -U \
-        aiutil[jupyter] \
     && /scripts/sys/purge_cache.sh 
 
 RUN useradd gitpod -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash \
