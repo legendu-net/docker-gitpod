@@ -13,8 +13,8 @@ USER gitpod
 WORKDIR /home/gitpod/
 RUN echo -e "\n. /scripts/path.sh\n" >> ~/.bashrc \
     && icon ipython -c --extra-pip-options break-system-packages \
-    && icon svim -ic -y --extra-pip-options break-system-packages \
-    && icon pt -ic \
+    && icon nvim -c -y \
+    #&& icon uv -ic \
     && /scripts/sys/purge_cache.sh
 
 COPY scripts/ /scripts/
