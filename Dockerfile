@@ -16,6 +16,5 @@ RUN icon bashit -ic \
     && icon nvim -c -y \
     && /scripts/sys/purge_cache.sh
 
-COPY scripts/ /scripts/
 #COPY settings/settings.json .gitpod-code/User/settings.json
 USER root
