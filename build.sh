@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker build -t dclong/gitpod .
+docker pull dclong/jupyterhub-ds:next
+docker build -t dclong/gitpod:next .
