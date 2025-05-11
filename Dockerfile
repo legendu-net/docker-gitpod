@@ -11,10 +11,9 @@ RUN useradd gitpod -l -u 33333 -G sudo -md /home/gitpod -s /bin/bash \
 
 USER gitpod
 WORKDIR /home/gitpod/
-RUN echo -e "\n. /scripts/path.sh\n" >> ~/.bashrc \
-    && icon ipython -c --extra-pip-options break-system-packages \
+RUN icon bashit -ic \
+    && icon ipython -c \
     && icon nvim -c -y \
-    #&& icon uv -ic \
     && /scripts/sys/purge_cache.sh
 
 COPY scripts/ /scripts/
